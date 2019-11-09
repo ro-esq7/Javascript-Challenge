@@ -6,7 +6,6 @@ var tableData = data;
 
 // Call <tbody> & <table> tags for data placement
 var tBody = d3.select("tbody");
-var ufoTable = d3.select("table");
 
 //Call the table class & link to html table (**where column names are located)
 var tClass = d3.select("class", "table table-striped");
@@ -28,10 +27,6 @@ function builder(ufos) {
 };
 
 builder(tableData);
-
-console.log(tableData);
-
-
 
 // Print arrays to console for debugging purposes
 console.log(tableData);
