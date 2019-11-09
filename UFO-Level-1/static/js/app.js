@@ -17,7 +17,7 @@ ufoTable.attr("class", "table table-striped");
     // 2. Add both keys and values of data.js
     // 3. Send data to columns
     // 4. Use this syntax so data is displayed properly
-function buildTable(ufos) {
+function builder(ufos) {
     ufos.forEach((urows) => {
         var tRow = tBody.append("tr");
         Object.entries(urows).forEach(([key, value]) => {
@@ -27,7 +27,7 @@ function buildTable(ufos) {
     });
 };
 
-buildTable(tableData);
+builder(tableData);
 
 console.log(tableData);
 
@@ -61,5 +61,5 @@ filterBtn.on("click", function() {
     // Print new table to console for debugging purposes
     console.log(newTable);
 
-    buildTable(newTable);
+    builder(newTable);
 });
