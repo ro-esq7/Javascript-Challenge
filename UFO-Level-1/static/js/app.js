@@ -4,8 +4,9 @@
 // from data.js
 var tableData = data;
 
-// Call <tbody> & <table> tags for data placement
+// Call <tbody> tag for data placement
 var tBody = d3.select("tbody");
+var ufoTable = d3.select("table");
 
 //Call the table class & link to html table (**where column names are located)
 var tClass = d3.select("class", "table table-striped");
@@ -44,7 +45,7 @@ var filterBtn = d3.select("#filter-btn");
 var dateInput = d3.select("#datetime");
 
 filterBtn.on("click", function() {
-    d3.event.preventDefault();
+    d3.event.preventDefault(); 
 
     tBody.html("");
     
